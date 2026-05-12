@@ -26,7 +26,7 @@ const Eye: React.FC<EyeProps> = ({ mouse }) => {
     }
 
     const angle = Math.atan2(mouse.y - eyeCenter.y, mouse.x - eyeCenter.x)
-    const maxRadius = rect.width / 4 - 2
+    const maxRadius = rect.width / 4 - 3
     const dist = distance(mouse, eyeCenter)
     const radius = Math.min(maxRadius, dist * 0.7)
     const offsetX = Math.cos(angle) * radius
@@ -38,7 +38,7 @@ const Eye: React.FC<EyeProps> = ({ mouse }) => {
   return (
     <span
       ref={eyeRef}
-      className="inline-block relative w-8.5 h-8.5 align-middle mx-2 border-2 border-white"
+      className="inline-block relative w-8.5 h-8.5 align-middle mx-2 border-3 border-white"
       style={{
         borderRadius: '50%',
       }}
@@ -68,6 +68,11 @@ const HomePage: React.FC = () => {
     >
       <h1 className="text-6xl font-bold font-mono mb-10">
         <span>axel.c</span>
+        <Eye mouse={mouse} />
+        <Eye mouse={mouse} />
+        <Eye mouse={mouse} />
+        <Eye mouse={mouse} />
+        <Eye mouse={mouse} />
         <Eye mouse={mouse} />
         <Eye mouse={mouse} />
         <span>l</span>
