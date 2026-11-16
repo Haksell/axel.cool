@@ -58,6 +58,7 @@ const Eye: React.FC<EyeProps> = ({ mouse }) => {
 
 const HomePage: React.FC = () => {
   const [mouse, setMouse] = useState<Position>({ x: 0, y: 0 })
+  console.log("Coucou Keelhaul")
 
   return (
     <div
